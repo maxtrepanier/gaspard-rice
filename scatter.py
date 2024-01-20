@@ -16,12 +16,17 @@ class GaspardRice:
     """ Simulation of scattering in the Gaspard-Rice model (i.e. an array of
     reflecting spheres) in d dimensions.
     """
-    def __init__(self, d=2, max_r=6):
+    def __init__(self, d=2, max_r=5, standard=True):
         """ d is the dimension of space, max_r the maximal distance within
         which the spheres are contained.
         """
         self.d = d
         self.spheres = [(np.zeros(d), max_r)]  # outer sphere
+
+        if standard:
+            r = 2.5
+            for x in [(-(3**0.5)*r/6, r/2), (r/(3**0.5), 0), (-(3**0.5)*r/6, -r/2)]:
+                self.add_sphere(x, 1)
 
     def add_sphere(self, x, r):
         r""" Adds a sphere at position x with radius r.
