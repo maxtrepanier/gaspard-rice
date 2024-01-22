@@ -42,7 +42,6 @@ int main(int argc, char* argv[])
             for (unsigned int j = 0; j < args.numY; ++j)
             {
                 Ray r;  // Convert [i,j] to coordinates
-//                 double s = 0, z = 0;
 
                 r.x << -3, args.x1 + (args.x2 - args.x1)*i/args.numX, args.y1 + (args.y2 - args.y1)*j/args.numY;
                 r.v << 1, 0, 0;
@@ -104,8 +103,6 @@ bool getArgs(margs &args, int argc, char* argv[])
             std::cout << "\t--corner: Corner position (default: -1 -1 1 1)\n";
             std::cout << "\t--sampling: Number of points on the grid (default: 1000 1000)\n";
             std::cout << "\t--maxstep: Maximal number of iterations (default: 100)\n";
-            std::cout << "\t--2d: GR2D model\n";
-            std::cout << "\t--angle: Vary initial angle\n";
             std::cout << "\t-v: verbose mode\n";
             return false;
         }
@@ -134,10 +131,6 @@ bool getArgs(margs &args, int argc, char* argv[])
                 args.maxstep = atoi(argv[++i]);
             else if (str == "-v")
                 args.verbose = true;
-            else if (str == "--2d")
-                args.gr2d = true;
-            else if (str == "--angle")
-                args.angle = true;
             else
             {
                 std::cout << "Unknown " << argv[i] << " argument" << std::endl;
