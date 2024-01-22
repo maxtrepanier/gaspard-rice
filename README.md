@@ -2,14 +2,15 @@
 
 ## Introduction
 The Gaspard-Rice model [^1] is a simple example of a model which exhibits
-chaos. In its simplest form, it consists of 3 discs in a plane, and we're
-interested in the scattering of rays in this system. This it turns out is
-chaotic: a small variation of the impact parameter $b$ of the incoming ray can
-lead to a large change in the scattering angle of the outgoing ray.
+chaos. In its simplest form, it consists of 3 discs in a plane (thought of as
+reflective mirrors), and we're interested in the scattering of rays against
+them. This turns out to be chaotic: a small variation of the impact parameter
+$b$ of the incoming ray can lead to a large change in the scattering angle of
+the outgoing ray.
 
 ## Overview
-This repository contains an updated version of the code I wrote for a project on
-chaos theory (2015), in which I reproduced the results of the paper [^1].  
+This repository contains a cleaned up version of the code I wrote for a project
+on chaos theory (2015), in which I reproduced the results of the paper [^1].  
 
 It contains 3 files:
  - main.py: A simple script to study scattering, either for a given impact
