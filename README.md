@@ -12,7 +12,8 @@ the outgoing ray.
 This repository contains a cleaned up version of the code I wrote for a project
 on chaos theory (2015), in which I reproduced the results of the paper [^1].  
 
-It contains 3 files:
+### Python implementation
+There are 3 files included:
  - main.py: A simple script to study scattering, either for a given impact
    parameter, e.g. by running
 
@@ -22,6 +23,11 @@ It contains 3 files:
         $ ./main.py -b 0 0.5
  - scatter.py: Implementation of a class GaspardRice which simulates the model
  - plotting.py: Additional methods to create graphs
+
+### C++ implementation
+The directory Scatter contains the source code for a C++ implementation of the
+model. The executable requires the libraries PNG++ and Eigen3. Compile using
+make.
 
 [^1]: P. Gaspard, S. A. Rice; Scattering from a classically chaotic
   repellor. *J. Chem. Phys*. 15 February 1989; 90 (4): 2225–2241.
